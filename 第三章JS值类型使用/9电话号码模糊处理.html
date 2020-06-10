@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电话号码模糊处理</title>
+</head>
+<body>
+    <script>
+        //repeat(参数1) 字符串复制  参数1 次数
+        // let a = 'ss ';
+        // console.log(a.repeat(3));// ss ss ss 
+
+        function telchange(phone,cont){
+            // return String(phone).slice(0,cont*-1)+"*".repeat(cont) 
+            // 139961*****
+            
+            return String(phone).replace(String(phone).slice(3,(cont+3)), "*".repeat(cont))
+            //139*****814
+            // let sum = "*".repeat(cont)      //   ***** 
+            // String(phone).slice(3,(cont+3))   // 值 96199
+        }
+
+        let phone=13996199814,cont=5;
+        document.body.innerHTML = telchange(phone,cont)
+
+    </script>
+</body>
+</html>

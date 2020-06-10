@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签模板实例</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            padding: 10px;
+        }
+        li:nth-child(even)
+        {
+            color:white;
+            background-color:black
+        } 
+        a{
+            color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // let name = "konmer";
+        // let web = "xw.konmer.cn";
+        // console.log(`你的名字${name},网址是${web}`)//你的名字konmer,网址是xw.konmer.cn
+        // console.log(tag`你的名字${name},网址是${web}`)// ["你的名字", ",网址是", "", raw: ["你的名字", ",网址是", ""]]
+        // function tag(strings,name,web){
+        // function tag(strings,...data){
+        //     console.log(strings); //undefined
+            // console.log(data); //["konmer", "xw.konmer.cn"]
+            // console.log(name); //konmer
+            // console.log(web); //xw.konmer.cn
+        // }
+
+
+       let data = [
+           {title:'的撒发生',name:'阿三'},
+           {title:'飒飒的',name:'但是'},
+           {title:'完善的地方',name:'地方'},
+           {title:'士大夫士大夫',name:'更多'},
+           {title:'在地震造成',name:'电风扇'}
+       ]
+
+       function func(){
+           return `<ul>
+            ${data.map(item =>
+                link`<li>标题:${item.title},作者:${item.name}</li>`
+            ).join(" ")}
+           </ul>`
+       }
+
+       function link(strings,...cont){
+           console.log(strings)
+           console.log(cont)
+           return strings.map((value,i)=>{
+               return (
+                   value + (cont[i]? cont[i].replace('的',`<a href="http://xw.konmer.cn">的</a>`):"")
+               )
+           })
+       }
+
+       document.body.innerHTML = func()
+
+    </script>
+    
+</body>
+</html>

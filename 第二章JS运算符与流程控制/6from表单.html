@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <form action="https://www.konmer.cn" id="userid">
+        用户：<input type="text" name="username" />
+        <hr/>
+        <input type="checkbox" name="userchoose" /> 同意XXX协议
+        <hr/>
+        <button>提交</button>
+    </form>
+    <script>
+
+        // from 表单
+        function query(name){
+           return document.querySelector(`[name=${name}]`)
+        }
+        
+        document.querySelector('#userid').addEventListener('submit',
+            function(event) {
+                let uName = query('username').value.trim();// 获取input 值并且删除空格 trim()
+                let uChoose = query('userchoose').checked; // 获取check 值 bool  true/false
+                console.log(uName);
+                console.log(uName.length);
+                console.log(uChoose);
+                if(!uName || uChoose === false ){
+                    event.preventDefault();//阻止为空提交
+                    alert('请勾选协议')
+                }
+            }
+        )
+
+    </script>
+</body>
+</html>

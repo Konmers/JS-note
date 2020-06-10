@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break continue label</title>
+</head>
+<body>
+    <script>
+        // break
+        // for(let i=0;i<5;i++)
+        // {
+        //     document.write("*")
+        //     if(i==3)
+        //     {
+        //        break;
+        //     }
+        // }
+        // * * * *
+
+        
+        //continue
+        // for(let i=0;i<5;i++)
+        // {
+        //     if(i==3)
+        //     {
+        //        continue;
+        //     } 
+        //     document.write(i)
+        // }
+        // 0 1 2 4
+
+        //label 指定方法 执行
+        function func(data){
+           go: for(let i=0;i<data;i++)
+            {
+                for(let j = data-i;j>0;j--)
+                {
+                    if(data-i == 4)
+                    {
+                        break go;
+                    }
+                    else
+                    {
+                        document.write('*')
+                    }
+                }
+                document.write('<br />')
+            }
+        }
+        func(6)
+        // ******
+        // *****
+
+
+
+    </script>
+</body>
+</html>

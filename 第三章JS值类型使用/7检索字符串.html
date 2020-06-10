@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检索字符串</title>
+</head>
+<body>
+
+    <script>
+        // const data = "koknmer.cnc";
+
+        //indexOf(参数1,参数2)  从左查询 返回具体数字  值为 -1 表示没找到
+        // 参数1 变量里的值  参数2 变量里值的下标 
+        // 参数1 区分大小写 
+        // console.log(data.indexOf("m")); // 3
+        // console.log(data.indexOf("m",5)); // -1   参数2的值 超过当前参数1的下标也会表示 -1
+        // console.log(data.indexOf("m",2)); // 3
+        // console.log(data.indexOf("m",3)); // 3
+
+        //lastIndexOf(参数1,参数2) 从左查询 参数1 最后出现的位置 返回具体数字  值为 -1 表示没找到
+        // 参数1 区分大小写 
+        // console.log(data.lastIndexOf('c'))
+
+        //includes(参数1,参数2)  返回 true / false 
+        // 参数1 变量里的值  参数2 变量里值的下标
+        // 参数1 区分大小写 
+        // console.log(data.includes("m")); //true
+        // console.log(data.includes("s")); //false
+        // console.log(data.includes("m",2)); //true
+        // console.log(data.includes("m",3)); //true
+        // console.log(data.includes("m",4)); //false
+
+        //startsWith(参数1，参数2)  查询字符串里是否以 参数1 开头
+        // 参数1 字符串   参数2 查找位置 默认为0
+        // 参数1 区分大小写 
+        // console.log(data.startsWith("k"));//true
+        // console.log(data.startsWith("K"));//false
+        // console.log(data.toUpperCase().startsWith("K"));//true  值转换小写再查询
+        // console.log(data.startsWith("o"));//false
+        // console.log(data.startsWith("k",2));//true
+
+        //endsWith(参数1，参数2)  查询字符串里是否以 参数1 结尾
+        // 参数1 字符串   参数2 查找位置 默认为0
+        // 参数1 区分大小写 
+        // console.log(data.endsWith("c"));//true
+        // console.log(data.endsWith("C"));//false
+        // console.log(data.toUpperCase().endsWith("C"));//true  值转换小写再查询
+        // console.log(data.endsWith("o"));//false
+        // console.log(data.endsWith("c",9));//true
+
+        //短路查询
+        // let data = ['konmer','cn','aaa'];
+        // let cont = '网址是konmer.zzzzcndd';
+
+        //some 循环查询 但是只要第一次匹配成功就返回  值 true/false
+        // let searchIndex = data.some(item=>{
+        //     console.log(item);
+        //     return cont.includes(item);
+        // })
+        // console.log(searchIndex);//true
+
+        //map 循环查询 循环数组全部内容才返回   值是 数组
+        // let searchIndexs = data.map(item=>{
+        //     console.log(item);
+        //     return (cont.includes(item)? cont.indexOf(item) :'undefined!!!!');
+        // })
+        // console.log(searchIndexs);//[3, 14, "undefined!!!!"]
+ 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串基本函数</title>
+</head>
+<body>
+    <input type="password" name="passw" />
+    <span class="msg"></span>
+    <br />*
+    <script>
+        // let a = "konMer";
+        // console.log(a.length); // 计算变量长度
+        // console.log(a.toUpperCase()); // toUpperCase()  变量全部转大写字母函数
+        // console.log(a.toLowerCase()); // toLowerCase()  变量全部转小写字母函数
+        
+        // let a = "   kon  mer  ";
+        // console.log(a.length); //13
+        // console.log(a.trim().length);//8  trim() 去除变量首尾两边的全部空格，中间不能去除
+
+        document.querySelector('[name="passw"]').addEventListener('keyup',function(){
+            console.log(this.value);
+            this.value = this.value.trim();
+            console.log(this.value.length);
+            if(this.value.length <= 5)
+            {
+                document.querySelector(".msg").innerHTML = '密码位数不够！！'
+            }
+            else
+            {
+                document.querySelector(".msg").innerHTML = '密码位数正确！！'
+            }
+        })
+
+        let data = 'konmer';
+        for(let i=0;i<data.length;i++)
+        {
+            let span = document.createElement("span");
+            span.style.fontSize = (i+1)*10 +'px';
+            span.innerHTML = data[i];
+            document.body.append(span);
+        }
+
+    </script>
+</body>
+</html>

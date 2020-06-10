@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <script>
+        
+        // let status = false
+        // if(status){
+        //    console.log('success!!') 
+        // }
+        // else{
+        //    console.log('error!!!') 
+        // }
+
+        document.querySelector('[name="wrtie"]').addEventListener('keyup',function(){
+            console.log(this.value)
+            console.log(this.value.length)
+            let msg = ''
+            if(this.value.length >=10)
+            {
+                msg = '密码强度：10'
+            }
+            else if(this.value.length >=6)
+            {
+                msg = '密码强度：6'
+            }else
+            {
+                msg = '密码强度：4'
+            }
+            document.querySelector('.show').innerHTML = msg 
+
+        })
+    </script>
+</body>
+</html>

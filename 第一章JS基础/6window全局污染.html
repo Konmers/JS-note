@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+
+        //window 全局污染 
+        //var 声明的变量 会更改 window.screenLeft值 
+        var screenLeft = 88 
+        console.log(window.screenLeft) // 88
+
+        // let 声明的变量 会更改 window.screenLeft值
+        let screenLeft = 88 
+        console.log(window.screenLeft) // 879
+
+        // const 声明的变量 会更改 window.screenLeft值
+        const screenLeft = 88 
+        console.log(window.screenLeft) // 467
+
+        
+    </script>
+</body>
+</html>

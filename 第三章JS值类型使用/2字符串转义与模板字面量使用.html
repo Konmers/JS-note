@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串转义与模板字面量使用</title>
+</head>
+<body>
+    <script>
+        //模板字面量
+        // let a = new String('sssss');
+        // console.log(a) 
+
+        //等价于 推荐使用
+        // let a = 'sssss';
+        // console.log(a) //sssss
+
+        //字符串转义   斜杠\ (1表示普通斜杠 2转义字符)  
+        //  let a = 'ssss\"sss';
+        //  console.log(a);//ssss"sss
+
+        //  \t 字符串加空格 注意 \t在js中输出和html中输出是不同的
+        //  let a = 'ssss\t\t\t\t\tsss';
+        //  console.log(a);//ssss					sss
+        // document.write(a)//ssss sss
+
+        //字面量形式 ` ${} `  两种值一样，使用 '+' 在后续开发麻烦 使用 ` `可以简单化 ${动态值}
+        let a = '2222';
+        let b = '3333';
+        console.log(a+'555  \t\t'+b);// 2222555  		3333
+        console.log(`${a}555
+        ${b}`);//2222555
+               //        3333
+
+
+    </script>
+</body>
+</html>

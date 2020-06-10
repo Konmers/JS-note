@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        //table 表格  tr行数   td列数
+
+        // let a = 5;
+        // document.write(`<table border="1" width="100%">`);
+        // while(a-- != 0)
+        // {   let b = 3;
+        //     document.write(`<tr>`);
+        //     while(b-- != 0)
+        //     {
+        //       document.write(`<td>${b}</td>`);
+        //     }
+        //     document.write(`</tr>`);
+        // }
+        // document.write(`</table>`);
+
+        function func(options){
+            console.log(options)
+            document.write(`<table border="1" width="100%">`);
+            while(options.tr-- != 0)
+            {   
+                let td = options.td
+                document.write(`<tr>`);
+                while(td-- != 0)
+                {
+                document.write(`<td>${td}</td>`);
+                }
+                document.write(`</tr>`);
+            }
+            document.write(`</table>`);
+        }
+        let data = {tr:10,td:8};
+        func(data);
+    </script>
+</body>
+</html>

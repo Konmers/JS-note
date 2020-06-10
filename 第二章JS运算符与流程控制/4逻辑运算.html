@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+
+        //逻辑运算   ||或   &&与   !非 真改假 假改真
+        let a = 5,b = 3;
+        if( a == b || a>b)   // true  '||' 只要有一边判断为 true 就执行
+        if( a == b && a>b)   //  false  '&&'  必须两边判断为 true 就执行
+        if(!( a == b))   //  true  '!'  更改判断语句或变量的值 eq: !(假)  结果 真
+        { console.log(a,b) }
+        else
+        { console.log('无') }
+
+        function query(name){
+            return document.querySelector(`[name=${name}]`)
+        }
+         
+        let inputs = document.querySelectorAll('[name="wrtie"],[name="wrties"]');
+        [...inputs].map((item,i) =>{
+            item.addEventListener("keyup", function(){
+                if(query("wrtie").value != query("wrties").value || query("wrtie").value< 6){
+                  document.querySelector('.show').innerHTML = '两次密码不统一！！'
+                }
+                else
+                {
+                  document.querySelector('.show').innerHTML = '两次密码一致！！'
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

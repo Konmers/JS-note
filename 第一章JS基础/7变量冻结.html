@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+
+        //变量冻结
+        const HOST = {
+            url:"http://www.konmer.cn",
+            port:3000
+        };
+        Object.freeze(HOST); //冻结一个对象，被冻结对象不能被修改，也不可以添加新的属性，方法
+        HOST.port = 80;
+        console.log(HOST) // {url:"http://www.konmer.cn",port:3000}
+    </script>
+</body>
+</html>

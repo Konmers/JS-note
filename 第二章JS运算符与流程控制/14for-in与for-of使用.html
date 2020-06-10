@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for-in & for-of</title>
+</head>
+<body>
+
+    <style>
+        ul{
+          list-style: none;
+        }
+        li{
+           border:solid  black 1px;
+           width: 200px;
+           height: 50px;
+        }
+    </style>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+    //for in   取数组下标    
+    // table 表    thead表头   tbody表身   tfoot表底
+    let data = [
+               {title:'是的纠纷化解',value:11},
+               {title:'送空间的课件课件',value:2},
+               {title:'急急急',value:5},
+               {title:'速度覅',value:6},
+                ]
+    // document.write(`<table border="1" width="100%">
+    // <thead><tr><th>标题</th><th>值</th></tr></thead>`)
+    // for(let i in data)
+    // {
+    //     document.write(`<tr><td>${data[i].title}</td><td>${data[i].value}</td></tr>`)
+    // }
+    // document.write('<tfoot><tr><td>结束</td><td>结束</td></tr></tfoot>')
+    // document.write('</table>')
+
+    // for(let i in window)
+    // {
+    //     console.log(window[i])
+    // }
+
+
+    // for of   取数组每一个元素  用于处理迭代对象
+    // for(let i of data)
+    // {
+    //     console.log(i)
+    // }
+     let lis = document.querySelectorAll('li')
+    //  console.log(lis.length)
+     for(let i of lis)
+     {
+         i.addEventListener('click',function(){
+             i.style.backgroundColor = 'red'
+         })
+     }
+    </script>
+</body>
+</html>

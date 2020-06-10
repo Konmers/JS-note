@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <span name='msg'></span>
+   <script>
+        let msg = '',value = 5 ;
+        // switch (value) {
+        //     case 1:
+        //        msg = '张三';
+        //        break;
+        //     case 2:
+        //        msg = '李四';
+        //        break;
+        //     case 3:
+        //        msg = '王五';
+        //        break;       
+        //    default:
+        //        msg = '赵六';
+        //        break;
+        // }
+        function fnc(value){
+            switch (value) {
+                case 1:
+                    msg = '张三';
+                    break;
+                case 2:
+                    msg = '李四';
+                    break;
+                case 3:
+                    msg = '王五';
+                    break;       
+                default:
+                    msg = '赵六';
+                    break;
+            }
+            return msg
+        }
+        document.querySelector('[name = "msg"]').innerHTML = fnc(value)
+   </script>    
+</body>
+</html>

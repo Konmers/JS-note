@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+
+        //注释
+        //  行注释
+
+        /* 块注释
+        */
+
+        // const a = 1;
+        // const b = 2;
+        // alert(a+b)
+        // console.log(a)
+        // console.log(window.name)
+
+        // typeof 
+        // var data = 'konmer'
+        // console.log(typeof data)  //string
+        // data = 99
+        // console.log(typeof data)  //number
+        // data = {}
+        // console.log(typeof data)  //object
+
+        //变量提升
+        // console.log(web)  //undefined
+        // var web = 'konmer'
+
+        //代码预解析
+        //1. var web
+        //2. console.log(web)  //undefined
+        //3. web ='konmer'
+
+        //函数
+        // function fuc(){
+        //     if(false){
+        //         var web = 'konmer'
+        //     }
+        //     console.log(web) //undefined 
+        // }
+        // fuc()
+
+        //代码解析
+        //1. function fuc() {
+            // var web
+            // if(false){
+                // web = 'konmer'
+            // }
+            // console.log(web)
+        // }
+
+        //let & const 必须先声明再使用
+        // console.log(web) //undefined
+        // var web = 'konmer'
+
+        // console.log(web)
+        // let web = 'konmer' //报错 Uncaught ReferenceError: Cannot access 'web' before initialization
+
+        // console.log(web)
+        // const web = 'konmer'  //报错 Uncaught ReferenceError: Cannot access 'web' before initialization
+
+        // var let const 共同点 函数中可以访问全局变量
+        // var web = 'konmer'
+        // let web = 'konmer'
+        // const web = 'konmer'
+        // function func () {
+        //   console.log('1  ',web); // 1   konmer
+        // }
+        // func();
+        // console.log('2  ',web);  //2   konmer
+        // var  1   konmer    2   konmer
+        // let  1   konmer    2   konmer
+        // const  1   konmer    2   konmer
+
+        //const let 不同点 
+        // const data = 'konmer'
+        // data = 'sss' //Uncaught TypeError: Assignment to constant variable.
+        //const 定义变量不能更改声明值
+
+        // let data = 'konmer'
+        // data = 'ss'
+        //let 定义变量可以更改声明值
+
+        //window 全局污染 
+        //var 声明的变量 会更改 window.screenLeft值 
+        // var screenLeft = 88 
+        // console.log(window.screenLeft) // 88
+
+        // let 声明的变量 会更改 window.screenLeft值
+        // let screenLeft = 88 
+        // console.log(window.screenLeft) // 879
+
+        // const 声明的变量 会更改 window.screenLeft值
+        // const screenLeft = 88 
+        // console.log(window.screenLeft) // 467
+
+        //变量冻结
+        // const HOST = {
+        //     url:"http://www.konmer.cn",
+        //     port:3000
+        // };
+        // Object.freeze(HOST); //冻结一个对象，被冻结对象不能被修改，也不可以添加新的属性，方法
+        // HOST.port = 80;
+        // console.log(HOST) // {url:"http://www.konmer.cn",port:3000}
+
+        //传值 传内存地址(对象)
+        // let a = 1;
+        // let b = a; 
+        // console.log(a,b); // 1,1
+  
+        // let e = {name:'konmer'};
+        // let f = e; 
+        // console.log(e,f) // {name: "konmer"} {name: "konmer"}
+
+        //null undefined
+        // let config = {};
+        // let web = '';
+        // console.log(config,web); // {}  ""
+        // let a = 222;
+        // let b;
+        // console.log(a,b)  // 222  undefined
+        
+        // “use strict” 严格模式 检查代码中未声明的变量，关键字 报错 ，规范代码  从上到下依次执行
+        //"use strict"; 
+        //web = 'konmer';
+        // console.log(web)// Uncaught ReferenceError: web is not defined
+
+        //赋值
+        // let a;
+        // a = 5;  // ‘ = ’ 赋值符
+        // console.log(a) // 5 
+
+        // 算术运算符
+        // let a = 5,b = 3;
+        // a -= 1; // 简写 a = a - 1 减法
+        // a += 1; // 简写 a = a + 1 加法
+        // a *= 1; // 简写 a = a * 1 乘法
+        // a /= 1; // 简写 a = a / 1 除法
+        // a %= 1; // 简写 a = a % 1 取模
+        // console.log(a) // '-' 4   '+' 6  '*' 5   '/' 5   '%' 0
+
+        // 一元运算  ++  --
+        // let a = 5;
+        // a++; // 6
+        // ++a; // 6
+        // a--; //4
+        // --a; //4
+        // let f = 1;
+        // f = f + ++a; // 优先级  f = f + (++a)   ++a 取a+1之后新值   value = 7
+        // f = f + a++; //优先级 f = (f + a)      a++ 取a+1之前原值    value = 6 
+        // console.log(f)
+
+        //比较运算符 >  >=  <  <=  ==    === 
+        // let a = 5, b = 3, c = '5';
+        // console.lg( a == b) //false
+        // console.lg( a > b) //true
+        // console.lg( a < b) //false
+        // console.lg( a >= b) //true
+        // console.lg( a <= b) //false
+
+        //不建议
+        // console.lg( c == b) //false
+        // console.lg( c > b) //true
+        // console.lg( c < b) //false
+        // console.lg( c >= b) //true
+        // console.lg( c <= b) //false
+
+        // 获取input值 实时更改h1的值
+        // let h11 = document.querySelector('.show');
+        // document
+        // .querySelector('[name="wrtie"')
+        // .addEventListener("keyup", function(){
+        //     h11.innerHTML = this.value > 10 ? '这不合适吧！！' : '这挺合适的！！';
+        //     console.log(this.value)
+        // })
+
+        //逻辑运算   ||或   &&与   !非 真改假 假改真
+        // let a = 5,b = 3;
+        // if( a == b || a>b)   // true  '||' 只要有一边判断为 true 就执行
+        // if( a == b && a>b)   //  false  '&&'  必须两边判断为 true 就执行
+        // if(!( a == b))   //  true  '!'  更改判断语句或变量的值 eq: !(假)  结果 真
+        // { console.log(a,b) }
+        // else
+        // { console.log('无') }
+
+        // function query(name){
+        //     return document.querySelector(`[name=${name}]`)
+        // }
+         
+        // let inputs = document.querySelectorAll('[name="wrtie"],[name="wrties"]');
+        // [...inputs].map((item,i) =>{
+        //     item.addEventListener("keyup", function(){
+        //         if(query("wrtie").value != query("wrties").value || query("wrtie").value< 6){
+        //           document.querySelector('.show').innerHTML = '两次密码不统一！！'
+        //         }
+        //         else
+        //         {
+        //           document.querySelector('.show').innerHTML = '两次密码一致！！'
+        //         }
+        //     })
+        // })
+
+        //短路运算 满足一个条件即可  可以判断赋值
+        // let a = 5,b = 0;nv
+        // let f = b || a;
+        // console.log(f)  // 5
+
+        //eq
+        // let sex = prompt('请输入性别') || '保密';
+        // console.log(sex) // 有值 输出值  无值输出'保密'
+
+        //from 表单
+
+        
+
+
+    </script>
+</body>
+</html>

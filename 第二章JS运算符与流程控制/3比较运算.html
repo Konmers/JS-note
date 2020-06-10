@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+
+        //比较运算符 >  >=  <  <=  ==    === 
+        let a = 5, b = 3, c = '5';
+        console.lg( a == b) //false
+        console.lg( a > b) //true
+        console.lg( a < b) //false
+        console.lg( a >= b) //true
+        console.lg( a <= b) //false
+
+        //不建议
+        console.lg( c == b) //false
+        console.lg( c > b) //true
+        console.lg( c < b) //false
+        console.lg( c >= b) //true
+        console.lg( c <= b) //false
+
+        // 获取input值 实时更改h1的值
+        let h11 = document.querySelector('.show');
+        document
+        .querySelector('[name="wrtie"')
+        .addEventListener("keyup", function(){
+            h11.innerHTML = this.value > 10 ? '这不合适吧！！' : '这挺合适的！！';
+            console.log(this.value)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板字面量嵌套技巧</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+           padding:10px;
+        }
+        li:nth-child(odd){
+            color: white;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // ` ${ 变量、方法、算术运算、比较运算、undefined } `
+        // function fuc(){
+        //     return "konmer";
+        // }
+        // let a = `http://xw.${fuc()}.cn`;
+        // console.log(a);//http://xw.konmer.cn
+
+        // let b = `http://xw.${2 + 4}.cn`;
+        // console.log(b);//http://xw.6.cn
+
+        // let c = `http://xw.${2 > 4}.cn`;
+        // console.log(c);//http://xw.false.cn
+
+        // let a;
+        // let d = `http://xw.${a}.cn`;
+        // console.log(d);//http://xw.undefined.cn
+
+        let data = [
+            {title:'撒打发士大夫'},
+            {title:'似的发射点反对的'},
+            {title:'去问驱蚊器为我'},
+            {title:'上述三个哥哥'}
+        ]
+        function func(){
+            return `<ul>${data.map(item =>
+               `<li>${item.title}</li>`
+            ).join(" ")}</ul>`;
+        }
+        document.body.innerHTML = func();
+
+    </script>
+</body>
+</html>

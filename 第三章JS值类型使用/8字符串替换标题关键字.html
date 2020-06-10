@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串替换标题关键字</title>
+</head>
+<body>
+    <script>
+        //replace(参数1,参数2)  
+        // 参数1 字符串里的值，参数2想要替换的值
+        // const data = "koknmer.cnc";
+        // console.log(data.replace('nm','zz'))//kokzzer.cnc
+
+        // let data = ["konmer","cn"];
+        // let cont = "网址是konmer和cndd";
+        // const result = data.reduce((total,item) =>
+        //     total.replace(item,`<a href="xw.konmesr.csn">值：${item}</a>`)
+        // ,cont)
+        // console.log('res------  ',result)
+        // document.body.innerHTML = result
+        // document.body.innerHTML = result
+
+        //正确
+        // total.replace(item,`<a href="xw.konmesr.csn">值：${item}</a>`)
+        //网址是<a href="xw.konmesr.csn">值：konmer</a>和<a href="xw.konmesr.csn">值：cn</a>dd
+        
+        // 错误1
+        // total.replace(item,`<a href="xw.konmer.cn">值：${item}</a>`)
+        // 网址是<a href="xw.konmer.<a href="xw.konmer.cn">值：cn</a>">值：konmer</a>和cndd
+        // 原因 href 中的值 'konmer' 和'cn'  与 data中循环元素相同 会自动给你替换
+    
+
+    </script>
+</body>
+</html>

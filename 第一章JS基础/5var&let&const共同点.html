@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello! </title>
+</head>
+<body>
+    <h1 class="show">word!! nb</h1>
+    <input name="wrtie" />
+    <input name="wrties" />
+    <script>
+        // var let const 共同点 函数中可以访问全局变量
+        var web = 'konmer'
+        let web = 'konmer'
+        const web = 'konmer'
+        function func () {
+          console.log('1  ',web); // 1   konmer
+        }
+        func();
+        console.log('2  ',web);  //2   konmer
+        // var  1   konmer    2   konmer
+        // let  1   konmer    2   konmer
+        // const  1   konmer    2   konmer
+
+        //const let 不同点 
+        const data = 'konmer'
+        data = 'sss' //Uncaught TypeError: Assignment to constant variable.
+        //const 定义变量不能更改声明值
+
+        let data = 'konmer'
+        data = 'ss'
+        //let 定义变量可以更改声明值
+
+    </script>
+</body>
+</html>
