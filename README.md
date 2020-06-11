@@ -8,4 +8,4 @@
 
 ## bilibili教学视频
 
-![bilibili教学视频](https://space.bilibili.com/282190994?from=search&seid=1588429586794467811)
+[bilibili教学视频](https://space.bilibili.com/282190994?from=search&seid=1588429586794467811)
