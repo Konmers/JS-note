@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean隐式转换</title>
+</head>
+<body>
+    <script>
+        // number 判断 -----------------------------------------
+            // let data = 99;
+            //原理  变量值 为0 
+            // console.log(Boolean(data)); //false  0  
+            //原理  变量值 不为 0 
+            // console.log(Boolean(data)); //true  1 
+            // if(data) console.log('success'); //success
+
+        // string 判断 -----------------------------------------
+            // let data = 'konemr';
+            //原理  字符串无值 eq: ''
+            // console.log(Boolean(data));    //false  0 
+            //原理  字符串有值 eq: 'konemr'
+            // console.log(Boolean(data)); //true  1 
+            // if(data) console.log('success'); //success
+
+        // 数组 判断 -----------------------------------------
+            let data = ['1','2'];   
+            //原理  数组为空 eq: []
+            // console.log(Boolean(data));    //true  1 
+            //原理  数组有值 eq:  ['1','2']
+            // console.log(Boolean(data)); //true  1 
+            if(data) console.log('success'); //success         
+
+    </script>
+</body>
+</html>
