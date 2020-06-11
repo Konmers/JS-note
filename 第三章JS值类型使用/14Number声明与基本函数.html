@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number声明与基本函数</title>
+</head>
+<body>
+    <script>
+        //引用类型
+            // let data = new Number(99);
+            // console.log(typeof data) // object
+            // console.log(data.valueOf()) // 99
+            // console.log(data.valueOf()+1) // 100
+            // console.log(data) // Number {99}
+            // console.log(data+1) // 100
+
+        //值类型
+            // let data = 99;
+            // console.log(typeof data); // number
+            // console.log(data); // 99
+            // console.log(data+1); // 100
+
+        //判断number 整数 函数   Number.isInteger(变量)   返回 true/false
+            // let data = 99,datas = 99.9999;
+            // console.log(Number.isInteger(data));  // true
+            // console.log(Number.isInteger(datas)); // false
+        
+        //控制输出 浮点数位数 toFixed(参数)
+            let datas = 99.23333;
+            console.log(datas.toFixed(2));  // 99.23
+            console.log(datas.toFixed(3));  // 99.233
+
+
+
+    </script>
+</body>
+</html>
