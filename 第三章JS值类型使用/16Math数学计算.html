@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math数学计算</title>
+</head>
+<body>
+    
+    <script>
+        // let data = [1,2,5,8];
+        // console.log(Math.min(data));// NaN
+
+        // 获取数组最小的值
+        // console.log(Math.min.apply(null,data));// 1
+
+        // 获取数组最大的值
+        // console.log(Math.max.apply(null,data));// 8
+
+        // 获取数组最小的值
+        // console.log(Math.max.apply(null,data));// 8
+         
+        // 数值向上取整 天花板
+        // console.log(Math.ceil(5.66));// 6
+        
+        // 数值向下取整 地板
+        // console.log(Math.floor(5.999));// 5
+
+        //数值四舍五入
+        // console.log(Math.round(5.999));// 6
+        // console.log((5.999).toFixed(2));// 6.00
+        
+        //随机数
+        // console.log(Math.random());
+        // 0 ~ 0.9XXXXXXX
+
+        //0 ~ 5
+        // console.log(Math.floor(Math.random() * 5)); // 向下取整  随机数 3
+
+        //数组随机
+        const data = ['张三','李四','王五','赵六','田七'];
+        // 随机控制公式    min+Math.floor(Math.random()*(max-min+1))
+        function func(data,start=0,end){
+            end = end ? end:data.length;
+            console.log('end--  ',end);
+            let index = start+Math.floor(Math.random()*(end-start));
+            console.log('index--  ',index);
+            console.log('data[index]--  ',data[index]);
+
+            return data[index];
+        }
+        console.log(func(data))
+
+    </script>
+
+</body>
+</html>

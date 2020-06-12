@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数值类型转换与NaN类型</title>
+</head>
+<body>
+    <script>
+
+        //NaN   Not a Number
+        // console.log(Number('dd')); //NaN
+        // console.log(2/'dd'); //NaN
+        // console.log(1 == 1);// true
+        // console.log(NaN == NaN);// false
+
+        //isNaN(参数)  函数检查参数是否 是非数字值 
+        // 参数值为 NaN或字符串、对象、undefined等非数字值 返回true 否则返回 false
+        // console.log(Number.isNaN(2/'dd')) // true
+
+        //Object.is(参数1，参数2)
+        //参数1 比较值     参数2  比较值
+        //比较两个参数是否相同 返回 true false
+        console.log(Object.is(2/'dd',NaN)) // true
+
+
+    </script>
+</body>
+</html>

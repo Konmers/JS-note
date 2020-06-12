@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期时间戳与计算脚本执行时间</title>
+</head>
+<body>
+    <script>
+        // 获取当期时间   new Date();   Date()  Date.now()
+        // let date = new Date();
+        // console.log(date); //Fri Jun 12 2020 11:04:31 GMT+0800
+        // console.log(typeof date);//object
+        // console.log(date*1); //1591931284918
+
+        // let date1 = Date();
+        // console.log(date1); //Fri Jun 12 2020 11:06:10 GMT+0800
+        // console.log(typeof date1);//string
+        // console.log(date1*1); //NaN
+
+        // let date2 = Date.now();
+        // console.log(date2); //1591931129300
+        // console.log(typeof date2);//number
+        // console.log(date2*1); //1591931129300
+
+        //计算脚本执行时间
+        // let start = Date.now();
+        // for(let i=0;i<2000000;i++){}
+        // let end = Date.now();
+        // console.log((end-start) /1000 + '秒'); // 0.012秒
+
+        //console定义时间标记位 计算 for
+        // console.time('for')
+        // for(let i=0;i<2000000;i++){}
+        // console.timeEnd('for') 
+        // for: 21.240234375ms
+
+        //时间转换js时间格式
+        // let date = new Date("2020-9-22 3:22:18");
+        // console.log(date);
+
+        // let date = new Date(2020,9,22,3,22,18);
+        // console.log(date);// Thu Oct 22 2020 03:22:18 GMT+0800
+
+        // let cont = [2020,9,22,3,22,18];
+        // let date = new Date(...cont);  
+        // console.log(date); //  Thu Oct 22 2020 03:22:18 GMT+0800 
+
+    </script>
+</body>
+</html>
