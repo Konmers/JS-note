@@ -5,6 +5,21 @@
     <title>ISO与TIMESTAMP格式互换</title>
 </head>
 <body>
-    
+    <script>
+        // ISO date时间格式转换时间戳
+            // let date = new Date("2020-06-12 09:11:52");
+            // console.log(date);          // Fri Jun 12 2020 09:11:52 GMT+0800 
+            // console.log(date * 1);      // 1591924312000
+            // console.log(Number(date));  // 1591924312000
+            // console.log(date.valueOf());// 1591924312000
+            // console.log(date.getTime());// 1591924312000
+
+        // 时间戳 转换 ISO date 格式
+            let date = new Date("2020-06-12 09:11:52");
+            let time = date.valueOf();
+            console.log(new Date(time)); //Fri Jun 12 2020 09:11:52 GMT+0800 (中国标准时间)
+
+        
+    </script>
 </body>
 </html>

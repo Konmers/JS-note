@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封装日期格式化函数</title>
+</head>
+<body>
+    <script>
+         let date = new Date("2020-06-12 09:11:52");
+        //  console.log(date.getFullYear()); // 2020   年
+        //  console.log(date.getMonth()+1);  //6       月
+        //  console.log(date.getDay());      //5       日
+        //  console.log(date.getHours());    //9       时
+        //  console.log(date.getMinutes());  //11      分
+        //  console.log(date.getSeconds());  //52      秒
+        //  console.log(date.getTime());     //1591924312000   时间戳
+
+        function dateFormat(data,format = "YYYY-MM-DD HH:mm:ss"){
+            let config = {
+                YYYY: data.getFullYear(),
+                MM: data.getMonth()+1,
+                DD: data.getDay(),
+                HH: data.getHours(),
+                mm: data.getMinutes(),
+                ss: data.getSeconds()
+            };
+            for(const i in config)
+                format = format.replace(i, config[i])
+            return format;
+        }
+
+        console.log(dateFormat(date))  // 2020-6-5 9:11:52
+        console.log(dateFormat(date,'YYYY年MM月DD日 HH时'))  // 2020年6月5日 9时
+
+    </script>
+</body>
+</html>
